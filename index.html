@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradePro - Advanced Charting Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lightweight-charts@4.1.0/dist/lightweight-charts.standalone.production.js"></script>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="logo">TradePro</div>
+        <nav class="nav">
+            <input type="text" id="symbolInput" placeholder="Search symbol (e.g., BTC/USDT)" value="BTC/USDT">
+            <select id="timeframeSelect">
+                <option value="1">1m</option>
+                <option value="5">5m</option>
+                <option value="15">15m</option>
+                <option value="60" selected>1H</option>
+                <option value="240">4H</option>
+                <option value="1440">1D</option>
+            </select>
+            <button id="addIndicatorBtn" class="btn-primary">+ Add Indicator</button>
+        </nav>
+        <div class="header-controls">
+            <span id="currentPrice" class="price-display">$0.00</span>
+            <span id="priceChange" class="price-change">+0.00%</span>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-container">
+        <!-- Sidebar - Watchlist -->
+        <aside class="sidebar">
+            <h3>Watchlist</h3>
+            <div class="watchlist-item" data-symbol="BTC/USDT">
+                <span class="symbol">BTC/USDT</span>
+                <span class="price">--</span>
+                <span class="change">--</span>
+            </div>
+            <div class="watchlist-item" data-symbol="ETH/USDT">
+                <span class="symbol">ETH/USDT</span>
+                <span class="price">--</span>
+                <span class="change">--</span>
+            </div>
+            <div class="watchlist-item" data-symbol="BNB/USDT">
+                <span class="symbol">BNB/USDT</span>
+                <span class="price">--</span>
+                <span class="change">--</span>
+            </div>
+            <div class="watchlist-item" data-symbol="XRP/USDT">
+                <span class="symbol">XRP/USDT</span>
+                <span class="price">--</span>
+                <span class="change">--</span>
+            </div>
+            <div class="watchlist-item" data-symbol="SOL/USDT">
+                <span class="symbol">SOL/USDT</span>
+                <span class="price">--</span>
+                <span class="change">--</span>
+            </div>
+        </aside>
+
+        <!-- Chart Area -->
+        <main class="chart-container">
+            <div id="mainChart"></div>
+            <div id="indicatorCharts"></div>
+        </main>
+
+        <!-- Right Panel - Indicators & Tools -->
+        <aside class="right-panel">
+            <h3>Active Indicators</h3>
+            <div id="activeIndicators" class="indicators-list">
+                <p class="no-indicators">No indicators added yet</p>
+            </div>
+
+            <h3>Drawing Tools</h3>
+            <div class="drawing-tools">
+                <button class="tool-btn" data-tool="trendline">📏 Trend Line</button>
+                <button class="tool-btn" data-tool="horizontal">➖ Horizontal</button>
+                <button class="tool-btn" data-tool="rectangle">⬜ Rectangle</button>
+                <button class="tool-btn" data-tool="text">📝 Text</button>
+            </div>
+
+            <h3>Chart Settings</h3>
+            <div class="chart-settings">
+                <label>
+                    <input type="checkbox" id="showVolume" checked> Show Volume
+                </label>
+                <label>
+                    <input type="checkbox" id="darkMode" checked> Dark Mode
+                </label>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Indicator Modal -->
+    <div id="indicatorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Indicator</h2>
+            <div class="indicator-categories">
+                <h3>Trend Indicators</h3>
+                <button class="indicator-btn" data-indicator="sma">SMA (Simple Moving Average)</button>
+                <button class="indicator-btn" data-indicator="ema">EMA (Exponential Moving Average)</button>
+                <button class="indicator-btn" data-indicator="wma">WMA (Weighted Moving Average)</button>
+                
+                <h3>Momentum Indicators</h3>
+                <button class="indicator-btn" data-indicator="rsi">RSI (Relative Strength Index)</button>
+                <button class="indicator-btn" data-indicator="macd">MACD</button>
+                <button class="indicator-btn" data-indicator="stochastic">Stochastic</button>
+                
+                <h3>Volatility Indicators</h3>
+                <button class="indicator-btn" data-indicator="bb">Bollinger Bands</button>
+                <button class="indicator-btn" data-indicator="atr">ATR (Average True Range)</button>
+                
+                <h3>Custom Indicator</h3>
+                <textarea id="customIndicatorCode" placeholder="Enter custom indicator code..."></textarea>
+                <button class="btn-primary" id="addCustomIndicator">Add Custom</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
