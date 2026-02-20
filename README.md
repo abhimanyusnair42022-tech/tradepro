@@ -46,7 +46,8 @@ All indicators are completely free with no limitations!
 ## 🚀 Getting Started
 
 ### Access the Platform
-**Visit**: https://abhimanyusnair42022-tech.github.io/tradepro/
+The platform is currently running at:
+**https://tradepro-005tw.app.super.myninja.ai**
 
 ### Basic Usage
 
@@ -211,6 +212,19 @@ Oscillator indicators include automatic reference lines:
 - Price change tracking
 - Comparative analysis
 
+## 🔮 Future Enhancements
+
+Planned features for future releases:
+- [ ] Price alerts system
+- [ ] Multi-chart view
+- [ ] Drawing tools (trend lines, rectangles)
+- [ ] Chart templates
+- [ ] Export charts as images
+- [ ] Additional data sources (stocks, forex)
+- [ ] Mobile app version
+- [ ] Backtesting capabilities
+- [ ] Social trading features
+
 ## 🛠️ Technical Support
 
 ### Browser Compatibility
@@ -237,6 +251,15 @@ Contributions are welcome! Areas for improvement:
 - Performance optimizations
 - Bug fixes
 
+## 📞 Contact
+
+For issues, questions, or suggestions:
+- Report bugs through the platform
+- Suggest new features
+- Share custom indicator code
+
 ---
 
-**Start Trading Today!** Visit the platform at https://abhimanyusnair42022-tech.github.io/tradepro/
+**Start Trading Today!** Visit the platform and experience professional-grade charting without the cost.
+
+**Platform URL**: https://tradepro-005tw.app.super.myninja.ai
